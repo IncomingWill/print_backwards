@@ -15,11 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="unorderedLinkedList.hpp">
+    <ClInclude Include="orderedLinkedList.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="linkedList.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
