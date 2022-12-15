@@ -16,8 +16,8 @@ void displayBackwards(orderedLinkedList<int>);					//function to display the lin
 
 int main()
 {
-	orderedLinkedList<int> numberList;							//initialize list
-	int number;													//initialize number to insert into list
+	orderedLinkedList<int> numberList;					//initialize list
+	int number;								//initialize number to insert into list
 
 	cout << "Please enter a list of numbers." << endl
 		<< "When you like to end input, input -999." << endl << endl;
@@ -30,12 +30,12 @@ int main()
 		cin >> number;
 	}
 	
-	if (numberList.isEmptyList())								//if list is empty, cannot print
+	if (numberList.isEmptyList())						//if list is empty, cannot print
 	{
 		cout << endl << "Cannot print an empty list." << endl << endl;
 	}
 	
-	if (!numberList.isEmptyList())								//if list is not empty, print the list
+	if (!numberList.isEmptyList())						//if list is not empty, print the list
 	{
 		cout << endl << "Here is the list you entered in order: ";
 
@@ -62,17 +62,17 @@ int main()
 void displayBackwards(orderedLinkedList<int> list)
 {
 
-	int count = list.length();									//get number of items in list
-	int data = 0;												//initialize variable to hold and print data from current node
+	int count = list.length();						//get number of items in list
+	int data = 0;								//initialize variable to hold and print data from current node
 
-	for (int i = count; i >= 1; i--)							//outer for loop iterates for each item in linked list
+	for (int i = count; i >= 1; i--)					//outer for loop iterates for each item in linked list
 	{
 		linkedListIterator<int> currentNode = list.begin();		//set currentNode to first node
-		for (int j = i - 1; j >= 1; j--)						//inner for loop iterates to point currentNode at list node (i - 1)
+		for (int j = i - 1; j >= 1; j--)				//inner for loop iterates to point currentNode at list node (i - 1)
 		{
-			++currentNode;										//currentNode will increment j times to find appropriate item in linked list
+			++currentNode;						//currentNode will increment j times to find appropriate item in linked list
 		}
-		data = *currentNode;									//assign the node info to data and print
+		data = *currentNode;						//assign the node info to data and print
 		cout << data << " ";
 	}
 
